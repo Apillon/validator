@@ -1,0 +1,24 @@
+/**
+  * Button styles.
+  */
+.btn {
+  border-radius: 0;
+  border: 0;
+  font-size: 16px;
+  font-weight: 600;
+  width: 154px;
+  height: 51px;
+  box-shadow: none !important;
+
+
+  &.btn-primary {
+    color: $white;
+    background-color: $primaryColor;
+
+    &:hover {
+      border: 0;
+      background-color: rgba($primaryColor, 0.9);
+    }
+  }
+}
+

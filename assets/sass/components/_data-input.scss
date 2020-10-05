@@ -1,0 +1,53 @@
+/**
+  * Data input box styles.
+  */
+.data-input-box {
+  height: 100%;
+  padding: 0;
+
+  .data-input-inner-box {
+    height: 100%;
+    border: 2px solid #E4E4E4;
+    padding: 18px 20px 18px 20px;
+  }
+
+  .data-input-label {
+    font-size: 13px;
+    margin-bottom: 0;
+    color: #aaaaaa;
+  }
+
+  .data-input-switch {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 13px;
+    color: #aaaaaa;
+
+    label {
+      padding-top: 2px;
+    }
+  }
+
+  .data-input-textarea {
+    padding-top: 10px;
+    width: 100%;
+    height: calc(100% - 18px);
+    border: 0;
+    outline: 0;
+    resize: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+    border-radius: 0px;
+  }
+}
