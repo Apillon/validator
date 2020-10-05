@@ -1,5 +1,6 @@
 set -e
 npm run build
+npm run generate
 cd dist
 echo 'validator.authtrail.com' > CNAME
 git init
