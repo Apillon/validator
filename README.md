@@ -14,7 +14,7 @@ The resulting hash can then be directly compared to the value stored on the publ
 
 The public anchor can either be copied from a public explorer, deep verify data or one can connect to Ethereum RPC using Metamask and read the anchor directly from Ethereum smart contract.
 
-![Authtrail](./static/Authtrail.png)
+![Authtrail](./static/img/how-it-works.png)
 
 ## Build Setup
 

@@ -1,0 +1,10 @@
+set -e
+npm run build
+cd dist
+echo 'validator.authtrail.com' > CNAME
+git init
+git add -A
+git commit -m "Deploy documentation"
+git push -f git@github.com:AuthTrail/Validator master:gh-pages
+cd -
+echo 'Deployment complete to: https://validator.authtrail.com'
