@@ -8,7 +8,8 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "lint": "npm run lint:js",
+    "deploy": "./bin/deploy.sh"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
