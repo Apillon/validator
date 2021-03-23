@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row data-hash-row">
-      <div class="col-12 col-md-5 data-input-box" @click="$refs['data-hash-input'].focus()">
+      <div class="col-12 col-md-12 data-input-box" @click="$refs['data-hash-input'].focus()">
         <div class="data-input-inner-box">
           <p class="data-input-label">
             Enter data
@@ -9,7 +9,7 @@
           <textarea ref="data-hash-input" v-model="data" class="data-input-textarea" />
         </div>
       </div>
-      <div class="or-container col-12 col-md-2">
+      <!-- <div class="or-container col-12 col-md-2">
         <span>or</span>
       </div>
       <div class="col-12 col-md-5 px-0">
@@ -30,7 +30,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="row d-flex justify-content-center mt-5">
       <b-button
@@ -92,24 +92,24 @@ export default Vue.extend({
       this.hash = digest.toString('base64')
       this.$emit('hashed', this.hash)
     },
-    hashDocument (event: any) {
-      const file = event.target.files && event.target.files[0] ? event.target.files[0] : null
-      if (!file) {
-        return
-      }
-      const reader = new FileReader()
-      reader.onload = () => {
-        if (reader.result) {
-          const buffer = Buffer.from(reader.result)
-          const digest = sha256(buffer)
-          const hash = digest.toString('base64')
-          this.hash = sha256(hash).toString('base64')
-          this.$emit('hashed', this.hash)
-        }
-      }
-      reader.readAsArrayBuffer(file)
-      this.fileName = file.name
-    }
+    // hashDocument (event: any) {
+    //   const file = event.target.files && event.target.files[0] ? event.target.files[0] : null
+    //   if (!file) {
+    //     return
+    //   }
+    //   const reader = new FileReader()
+    //   reader.onload = () => {
+    //     if (reader.result) {
+    //       const buffer = Buffer.from(reader.result)
+    //       const digest = sha256(buffer)
+    //       const hash = digest.toString('base64')
+    //       this.hash = sha256(hash).toString('base64')
+    //       this.$emit('hashed', this.hash)
+    //     }
+    //   }
+    //   reader.readAsArrayBuffer(file)
+    //   this.fileName = file.name
+    // }
   }
 })
 </script>
