@@ -22,7 +22,6 @@
         v-model="useMetamask"
         class="metamask-switch mb-1 d-block d-sm-none"
         switch
-        @change="useMetamask = !useMetamask; anchorData = '';"
       >
         Use Metamask
       </b-form-checkbox>
@@ -37,7 +36,6 @@
             v-model="useMetamask"
             class="data-input-switch d-none d-sm-block"
             switch
-            @change="useMetamask = !useMetamask; anchorData = '';"
           >
             Use MetaMask
           </b-form-checkbox>
