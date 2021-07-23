@@ -8,16 +8,24 @@
         <a class="navbar-brand" href="https://authtrail.com/" target="_blank" rel="noopener noreferrer">
           <img src="/img/logo.svg" width="166" height="45" class="d-inline-block align-top" alt="">
         </a>
+        <b-button 
+          variant="primary" 
+          href="https://authtrail.com/"
+          class="my-2 my-md-0"
+        >
+          Homepage
+        </b-button>
       </div>
+
     </nav>
     <Nuxt />
-    <footer class="pt-5 pb-5">
+    <!-- <footer class="pt-5 pb-5">
       <div class="text-center">
         <div class="at-verified">
           <img src="/img/verified.svg" alt="Verified by AuthTrail" style="max-width: 127px;">
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
