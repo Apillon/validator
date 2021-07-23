@@ -2,13 +2,15 @@
   * Button styles.
   */
 .btn {
-  border-radius: 0;
-  border: 0;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 1rem;
   width: 154px;
   height: 51px;
   box-shadow: none !important;
+  transition: background-color 0.15s ease-in-out;
+  padding: .75rem 1rem;
 
 
   &.btn-primary {

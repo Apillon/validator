@@ -103,8 +103,9 @@ export default Vue.extend({
 
     .step-content {
       background-color: white;
-      box-shadow: 0px 8px 63px #1C325B0F;
       padding: 45px 44px 62px 44px;
+      box-shadow: 10px 10px 40px $primary-transparent;
+      border-radius: .75rem!important;
     }
   }
 </style>
