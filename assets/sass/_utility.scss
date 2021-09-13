@@ -1,0 +1,41 @@
+.shadow-purple {
+  box-shadow: 10px 10px 40px $primary-transparent;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
+
+.text-gray {
+  color: $gray-500;
+}
+
+.mt-075 {
+  margin-top: 0.75rem;
+}
+
+.mb-075 {
+  margin-bottom: 0.75rem;
+}
+
+.px-0375 {
+  padding-left: 0.375rem !important;
+  padding-right: 0.375rem !important;
+}
+
+.px-075 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.p-075 {
+  padding: 0.75rem;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
