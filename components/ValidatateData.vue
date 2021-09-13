@@ -71,7 +71,7 @@
       <div class="col-12 col-md-6 data-input-box pl-0 pl-md-2 pl-lg-4" @click="$refs['data-merkle-input'].focus()">
         <div class="data-input-inner-box">
           <p class="data-input-label">
-            Enter merkle proof
+            Enter Merkle proof
           </p>
           <textarea
             ref="data-merkle-input"
@@ -191,7 +191,7 @@ export default Vue.extend({
       }
 
       if (!this.merkleProof) {
-        this.validationErrors.merkleProof = 'Please enter merkle proof.'
+        this.validationErrors.merkleProof = 'Please enter Merkle proof.'
         errors = true
       } else if (!validateJSON(this.merkleProof)) {
         this.validationErrors.merkleProof = 'Merkle proof must be in valid JSON format.'
