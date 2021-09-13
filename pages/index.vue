@@ -2,28 +2,35 @@
   <div class="container">
     <div class="main-container">
       <div class="row mb-5 pt-5 d-flex">
-        <h1 class="col-12 col-sm-6 title">
-          Validator
+         <h1 class="col-12 col-sm-8 ">
+          Hash and verify data in 2 steps
         </h1>
-        <div class="col-12 col-sm-6 instructions-link">
-          <nuxt-link to="/instructions">
-            Instructions
+        <div class="col-12 col-sm-4 instructions-link">
+          <nuxt-link class="font-h3" to="/instructions">
+            How does it work?
           </nuxt-link>
         </div>
       </div>
       <div class="step-container">
         <h3 class="step-title">
-          <strong>1. Step</strong> Enter data
+          <strong>Step 1:</strong> Hash data
         </h3>
+        <div class="font-body-big">
+          Use Authtrail Validator to verify data validity on the blockchain network.
+        </div> <br/>
         <HashData
           class="step-content"
           @hashed="handleHashedData($event)"
         />
       </div>
+     
       <div id="#second-step" class="step-container">
         <h3 class="step-title">
-          <strong>2. Step</strong> Verify data
+          <strong>Step 2:</strong> Verify data
         </h3>
+        <div class="font-body-big">
+          Input the data you get as a result of calling the deep verify route from the API.
+        </div> <br/>
         <ValidatateData
           class="step-content"
           :hashed-data="hashedData"

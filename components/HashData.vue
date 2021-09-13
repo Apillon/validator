@@ -43,14 +43,14 @@
       <div v-else class="col-12 data-hash">
         <p class="data-hash-status">
           <img src="/img/check-hashed.png">
-          Hashed
+          Data hashed succesfully
         </p>
         <p class="data-hash-hash">
+          <strong>Hash: </strong> {{ hash }}
           <img class="copy-icon" src="/img/copy.svg" @click="copyToClipboard(hash)">
-          {{ hash }}
         </p>
         <p class="data-hash-clear" @click="clearData()">
-          clear data
+          Clear data
         </p>
       </div>
     </div>
