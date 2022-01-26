@@ -9,7 +9,7 @@
       <b-container class="px-0375">
         <!-- Logo - mobile -->
         <b-navbar-brand to="/">
-          <img src="/img/logo.svg" width="166" height="45" class="d-inline-block align-top" alt="" />
+          <img src="/img/logo-bright.svg" width="166" height="45" class="d-inline-block align-top" alt="" />
           <h2
             class="d-inline-block mb-0 ml-2"
             style="line-height: 44px;"
@@ -82,7 +82,9 @@ export default {
 
 <style lang="scss" scoped>
   @import "../assets/sass/abstracts/variables";
-
+  html {
+    font-family: $font-family-sans-serif;
+  }
   .transparent-nav {
     background: transparent;
     padding-top: 2rem;
@@ -95,14 +97,14 @@ export default {
   }
 
   .solid-nav {
-    background: $white;
+    background: $bgSecondaryColor;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    box-shadow: 0px 2px 16px $primary-transparent;
+    box-shadow: $box-shadow;
     transition: background-color 0.15s, padding 0.15s, box-shadow 0.15s;
   }
 
   #nav-collapse.show {
-    background-color: $white;
+    background-color: $bgSecondaryColor;
   }
 </style>

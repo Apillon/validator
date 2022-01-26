@@ -2,20 +2,19 @@
   <div>
     <div class="row first-row">
       <div class="col-12 col-md-6 data-input-box pr-0 pr-md-2 pr-lg-4" @click="$refs['data-hashed-input'].focus()">
-        <div class="data-input-inner-box">
-          <p class="data-input-label">
+        
+          <label>
             Enter hash
-          </p>
-          <textarea
-            ref="data-hashed-input"
-            v-model="hash"
-            class="data-input-textarea"
-            @input="validationErrors.hash = ''"
+          </label>
+          <textarea 
+          ref="data-hashed-input" 
+          v-model="hash" class="form-control data-input-textarea"
+          @input="validationErrors.hash = ''" 
           />
-        </div>
-        <p v-if="validationErrors.hash" class="validation-error">
+          <p v-if="validationErrors.hash" class="validation-error">
           {{ validationErrors.hash }}
         </p>
+        
       </div>
       <b-form-checkbox
         v-if="connected"
@@ -26,12 +25,10 @@
         Use Metamask
       </b-form-checkbox>
       <div class="col-12 col-md-6 data-input-box pl-0 pl-md-2 pl-lg-4" @click="$refs['data-hash-anchor'].focus()">
-        <div class="data-input-inner-box">
-          <p
-            class="data-input-label"
-            v-text="useMetamask ? 'Enter transaction ID' : 'Enter anchor data'"
-          />
-          <b-form-checkbox
+        <label 
+        v-text="useMetamask ? 'Enter transaction ID' : 'Enter anchor data'"
+        />
+         <b-form-checkbox
             v-if="connected"
             v-model="useMetamask"
             class="data-input-switch d-none d-sm-block"
@@ -39,50 +36,45 @@
           >
             Use MetaMask
           </b-form-checkbox>
-          <textarea
+
+           <textarea
             ref="data-hash-anchor"
             v-model="anchorData"
-            class="data-input-textarea"
+            class="form-control"
             @input="validationErrors.anchorData = ''"
           />
-        </div>
-        <p v-if="validationErrors.anchorData" class="validation-error">
+          <p v-if="validationErrors.anchorData" class="validation-error">
           {{ validationErrors.anchorData }}
         </p>
       </div>
     </div>
     <div class="row second-row">
       <div class="col-12 col-md-6 data-input-box pr-0 pr-md-2 pr-lg-4" @click="$refs['data-blocks-input'].focus()">
-        <div class="data-input-inner-box">
-          <p class="data-input-label">
-            Enter blocks
-          </p>
-          <textarea
-            ref="data-blocks-input"
-            v-model="blocks"
-            class="data-input-textarea"
-            @input="validationErrors.blocks = ''"
+          <label>
+             Enter blocks
+          </label>
+          <textarea 
+          ref="data-blocks-input" 
+          v-model="blocks" class="form-control"
+          @input="validationErrors.blocks = ''" 
           />
-        </div>
-        <p v-if="validationErrors.blocks" class="validation-error">
+          <p v-if="validationErrors.blocks" class="validation-error">
           {{ validationErrors.blocks }}
         </p>
       </div>
       <div class="col-12 col-md-6 data-input-box pl-0 pl-md-2 pl-lg-4" @click="$refs['data-merkle-input'].focus()">
-        <div class="data-input-inner-box">
-          <p class="data-input-label">
+          <label>
             Enter Merkle proof
-          </p>
-          <textarea
-            ref="data-merkle-input"
-            v-model="merkleProof"
-            class="data-input-textarea"
-            @input="validationErrors.merkleProof = ''"
+          </label>
+          <textarea 
+          ref="data-merkle-input" 
+          v-model="merkleProof" class="form-control"
+          @input="validationErrors.merkleProof = ''" 
           />
-        </div>
-        <p v-if="validationErrors.merkleProof" class="validation-error">
+          <p v-if="validationErrors.merkleProof" class="validation-error">
           {{ validationErrors.merkleProof }}
         </p>
+      
       </div>
     </div>
     <div v-if="verifyError" class="row d-flex justify-content-center mb-5">
@@ -287,7 +279,7 @@ export default Vue.extend({
   }
 
   .validation-error {
-    color: #525f7f;
+    color: $danger;
     font-size: 14px;
   }
 

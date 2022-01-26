@@ -2,12 +2,11 @@
   <div>
     <div class="row data-hash-row">
       <div class="col-12 col-md-12 data-input-box" @click="$refs['data-hash-input'].focus()">
-        <div class="data-input-inner-box">
-          <p class="data-input-label">
+        <label>
             Enter data
-          </p>
-          <textarea ref="data-hash-input" v-model="data" class="data-input-textarea" />
-        </div>
+          </label>
+          <textarea ref="data-hash-input" v-model="data" class="form-control data-input-textarea" />
+        
       </div>
       <!-- <div class="or-container col-12 col-md-2">
         <span>or</span>
@@ -42,12 +41,20 @@
       </b-button>
       <div v-else class="col-12 data-hash">
         <p class="data-hash-status">
-          <img src="/img/check-hashed.png">
+          <img src="/img/at-checkmark.svg" width="36" height="auto">
           Data hashed succesfully
         </p>
         <p class="data-hash-hash">
           <strong>Hash: </strong> {{ hash }}
-          <img class="copy-icon" src="/img/copy.svg" @click="copyToClipboard(hash)">
+          <b-button
+          class="btn-clipboard ml-1"
+          variant="outline-primary"
+          width="1em"
+          height="1em"
+          @click="copyToClipboard(hash)"
+        >
+          <b-icon icon="files" />
+        </b-button>
         </p>
         <p class="data-hash-clear" @click="clearData()">
           Clear data
@@ -137,7 +144,7 @@ export default Vue.extend({
     text-align: center;
 
     .data-hash-status {
-      color: $primaryColor;
+      color: $primary;
       font-size: 23px;
       margin-bottom: 35px;
       font-weight: 600;

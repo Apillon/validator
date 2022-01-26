@@ -24,6 +24,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      {
+        rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'
+      }
     ]
   },
   /*
@@ -60,6 +63,10 @@ export default {
     // Doc: https://github.com/rigor789/vue-scrollto#readme
     'vue-scrollto/nuxt'
   ],
+
+  bootstrapVue: {
+    icons: true
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

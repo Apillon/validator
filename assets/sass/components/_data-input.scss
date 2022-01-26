@@ -1,6 +1,30 @@
 /**
   * Data input box styles.
   */
+
+  textarea.form-control {
+    background-color: $at-inputDarkBlue;
+    border: 1px solid lighten($primary, 5%);
+    color: $gray-500;
+    padding-top: 10px;
+    width: 100%;
+    height: calc(100% - 18px);
+    resize: none;
+    &:focus {
+        background-color: $at-inputDarkBlueFocus;
+        color: $gray-500;
+        border: 1px solid $primary;
+        
+    }
+  }
+  label {
+   
+      color: $gray-500;
+      font-weight: $bold-text;
+  
+  }
+
+
 .data-input-box {
   height: 100%;
   padding: 0;
@@ -20,24 +44,17 @@
 
   .data-input-switch {
     position: absolute;
-    top: 18px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
     font-size: 13px;
-    color: #aaaaaa;
+    color: $gray-500;
 
     label {
       padding-top: 2px;
     }
   }
 
-  .data-input-textarea {
-    padding-top: 10px;
-    width: 100%;
-    height: calc(100% - 18px);
-    border: 0;
-    outline: 0;
-    resize: none;
-  }
+  
 
   ::-webkit-scrollbar {
     width: 4px;
