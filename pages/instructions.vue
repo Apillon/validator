@@ -83,12 +83,12 @@ export default Vue.extend({
     padding-bottom: 19px;
 
     a {
-      color: $primaryColor;
+      color: $primary;
       font-weight: 600;
       text-decoration: none;
 
       &:hover {
-        opacity: 0.7;
+        text-decoration: underline;
       }
     }
   }
@@ -110,9 +110,10 @@ export default Vue.extend({
     margin-bottom: 80px;
 
     .instructions-content {
-      background-color: white;
-      box-shadow: 0px 8px 63px #1C325B0F;
+      background-color: $bgSecondaryColor;
+      box-shadow: $box-shadow;
       padding: 45px 44px 62px 44px;
+      border-radius: $br-radius;
 
       .instructions-title {
         font-weight: 600;

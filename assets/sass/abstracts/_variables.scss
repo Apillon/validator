@@ -1,6 +1,12 @@
 /**
  * Application's style variables.
  */
+$bgPrimaryColor: #16161A;
+$bgSecondaryColor:#242629;
+
+$font-family-sans-serif: 'Poppins', sans-serif;  
+
+
 $white: #FFFFFF;
 $primaryColor: #4600BF;
 $secondaryColor: #FF00D4;
@@ -9,9 +15,10 @@ $successColor: #3DCD70;
 $textColor: #161618;
 $primary-transparent: rgba(70, 0, 191, 0.1);
 
-$primary:       #4600BF;
-$secondary:     #FF00D4;
-$success:       #27D743;
+
+$primary:       #7F5Af0;
+$secondary:     #B62CA8;
+$success:       #2CB67D;
 // $info:          $cyan;
 $warning:       #FF4545;
 $danger:        #FF4545;
@@ -19,6 +26,15 @@ $danger:        #FF4545;
 $dark:          #041147;
 $black:    #161618;
 
+
+$at-inputDarkBlue: adjust-color($primary, $saturation:-48%, $lightness:-38%);
+$at-inputDarkBlueFocus: adjust-color($primary, $saturation:-44%, $lightness:-48%);
+$cardShadow: rgba(0, 0, 0, .7);
+
+$box-shadow: 0px 0.5rem 1rem $cardShadow;
+$btn-focusShadow: rgba(91, 43, 236,  0.5);
+$br-radius: .75rem;
+$bold-text: 700;
 
 $font-size-base: 1rem;
 
@@ -32,3 +48,5 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
+
+$textColor: $gray-400;

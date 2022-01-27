@@ -79,30 +79,30 @@ h2 {
 
 h3 {
   @extend .font-h3;
-  color: $dark;
+  color: $secondary;
 }
 
 h4 {
   @extend .font-h4;
-  color: $dark;
+  color: $primary;
 }
 
 h5 {
   @extend .font-h5;
-  color: $dark;
+  color: $primary;
 }
 
 h6 {
   @extend .font-h6;
-  color: $dark;
+  color: $primary;
 }
 
 a {
   @extend .font-body;
   font-weight: 700;
   color: $primary;
+  &:hover {
+    color:$primary
 
-  // &:hover {
-  //   text-decoration: none;
-  // }
+  }
 }
